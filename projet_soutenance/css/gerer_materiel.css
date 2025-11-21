@@ -1,0 +1,350 @@
+.ajout-materiel-section {
+  background: #f8fafc;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 2em 2em 1.5em 2em;
+  margin-bottom: 2em;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.ajout-materiel-form h2 {
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #1976d2;
+}
+.ajout-materiel-form .form-row {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+.ajout-materiel-form input,
+.ajout-materiel-form select,
+.ajout-materiel-form textarea {
+  font-family: inherit;
+  font-size: 1em;
+  padding: 0.7em 1em;
+  border: 1px solid #e0e7ef;
+  border-radius: 8px;
+  background: #fff;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+.ajout-materiel-form input:focus,
+.ajout-materiel-form select:focus,
+.ajout-materiel-form textarea:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 2px #e0f2fe;
+}
+.ajout-materiel-form textarea {
+  min-height: 60px;
+  resize: vertical;
+  width: 100%;
+  margin-bottom: 1em;
+}
+.btn-ajouter {
+  background: linear-gradient(90deg, #1976d2 60%, #2196f3 100%);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 0.7em 2.2em;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(25,118,210,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+  margin-left: 1em;
+}
+.btn-ajouter:hover {
+  background: linear-gradient(90deg, #125ea7 60%, #1976d2 100%);
+  box-shadow: 0 4px 16px rgba(25,118,210,0.13);
+}
+.success-message {
+  background: #e6f9e6;
+  color: #1a7f1a;
+  border: 1px solid #1a7f1a;
+  border-radius: 8px;
+  padding: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  font-weight: 500;
+}
+.liste-materiel-section {
+  margin-top: 2em;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.liste-materiel-section h2 {
+  margin-bottom: 1em;
+  color: #1976d2;
+  font-size: 1.15em;
+  font-weight: 600;
+}
+.materiel-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  overflow: hidden;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 1em;
+}
+.materiel-table th, .materiel-table td {
+  padding: 1em 0.7em;
+  text-align: left;
+  border-right: 1px solid #e0e7ef;
+  border-bottom: 1px solid #e0e7ef;
+  background: #fff;
+}
+.materiel-table th {
+  background: #f1f5f9;
+  color: #1976d2;
+  font-weight: 600;
+  font-size: 1em;
+  border-top: 1px solid #e0e7ef;
+}
+.materiel-table tr:nth-child(even) td {
+  background: #f8fafc;
+}
+.materiel-table tr:last-child td {
+  border-bottom: none;
+}
+.materiel-table th:last-child, .materiel-table td:last-child {
+  border-right: none;
+}
+.materiel-table th, .materiel-table td {
+  border-radius: 0.5em;
+}
+.btn-modifier, button[onclick^="openModal"] {
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 16px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 500;
+    margin-right: 6px;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 6px rgba(37,99,235,0.08);
+    display: inline-block;
+}
+.btn-modifier:hover, button[onclick^="openModal"]:hover {
+    background-color: #1e40af;
+    box-shadow: 0 4px 12px rgba(37,99,235,0.18);
+}
+
+/* Style pour la modale d'édition */
+#editModal.modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+#editModal .modal-content {
+    background: #f9fafb;
+    padding: 32px 28px 24px 28px;
+    border-radius: 12px;
+    min-width: 340px;
+    box-shadow: 0 8px 32px rgba(37,99,235,0.10);
+    position: relative;
+    border: 1.5px solid #e0e7ef;
+}
+#editModal h2 {
+    margin-top: 0;
+    color: #2563eb;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}
+#editModal label {
+    display: block;
+    margin: 10px 0 4px 0;
+    font-weight: 500;
+    color: #222;
+    letter-spacing: 0.2px;
+}
+#editModal input[type="text"],
+#editModal input[type="number"] {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1.5px solid #dbeafe;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-size: 1em;
+    background: #fff;
+    transition: border 0.2s;
+}
+#editModal input[type="text"]:focus,
+#editModal input[type="number"]:focus {
+    border: 1.5px solid #2563eb;
+    outline: none;
+    background: #f1f5fd;
+}
+#editModal button[type="submit"] {
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 28px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.10);
+}
+#editModal button[type="submit"]:hover {
+    background-color: #1741a0;
+}
+#editModal .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 1.5em;
+    color: #2563eb;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+#editModal .close-btn:hover {
+    color: #ef4444;
+}
+.btn-supprimer {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 16px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 6px rgba(231,76,60,0.08);
+  margin-left: 6px;
+}
+.btn-supprimer:hover, .btn-supprimer:focus {
+  background-color: #c0392b;
+  box-shadow: 0 4px 12px rgba(231,76,60,0.18);
+}
+.modal {
+  animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+@media (max-width: 900px) {
+  .ajout-materiel-section {
+    padding: 1em 0.5em;
+  }
+  .materiel-table th, .materiel-table td {
+    padding: 0.7em 0.3em;
+    font-size: 0.98em;
+  }
+}
+@media (max-width: 700px) {
+  .materiel-table, .materiel-table thead, .materiel-table tbody, .materiel-table th, .materiel-table td, .materiel-table tr {
+    display: block;
+  }
+  .materiel-table thead {
+    display: none;
+  }
+  .materiel-table tr {
+    margin-bottom: 1.2em;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    padding: 0.7em 0.5em;
+  }
+  .materiel-table td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    min-height: 2.2em;
+    font-size: 1em;
+    margin-bottom: 0.5em;
+  }
+  .materiel-table td:before {
+    position: absolute;
+    top: 0.7em;
+    left: 1em;
+    width: 45%;
+    white-space: nowrap;
+    font-weight: 600;
+    color: #1976d2;
+    content: attr(data-label);
+  }
+}
+@media (max-width: 600px) {
+  .ajout-materiel-form .form-row {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  .materiel-table {
+    font-size: 0.95em;
+  }
+}
+.mes-reservations {
+    margin: 40px auto 0 auto;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    padding: 32px 24px;
+}
+.mes-reservations h2 {
+    font-size: 1.4em;
+    margin-bottom: 18px;
+    color: #2563eb;
+    font-weight: 600;
+}
+.reservations-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #f9fafb;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 1em;
+}
+.reservations-table th, .reservations-table td {
+    padding: 12px 16px;
+    text-align: left;
+}
+.reservations-table th {
+    background: #f1f5f9;
+    color: #222;
+    font-weight: 600;
+    border-bottom: 2px solid #e5e7eb;
+}
+.reservations-table tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+.reservations-table tr:last-child {
+    border-bottom: none;
+}
+.reservations-table td {
+    color: #333;
+}
+.reservations-table td:last-child {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.reservations-table .accepted {
+    color: #16a34a;
+}
+.reservations-table .rejected {
+    color: #e11d48;
+}
+.reservations-table .pending {
+    color: #f59e42;
+} 

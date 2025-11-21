@@ -1,0 +1,323 @@
+body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    background: #f8fafc;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 0.7rem 2.5rem 0.7rem 1.2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+    border-bottom: 1px solid #f1f5f9;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.back-btn {
+    margin-right: 1.2rem;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+.nav-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #222;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.gear-icon {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 0.3rem;
+}
+.nav-menu {
+    display: flex;
+    gap: 1.2rem;
+    margin-left: 2.5rem;
+    list-style: none;
+    padding: 0;
+}
+.nav-menu li a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    transition: background 0.18s, color 0.18s;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.nav-menu li a.active, .nav-menu li a:hover {
+    background: #111827;
+    color: #fff;
+}
+.profile-badge {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.profile-circle {
+    background: #10b981;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+.profile-name {
+    color: #222;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.dashboard-main {
+    max-width: 1200px;
+    margin: 2.5rem auto 0 auto;
+    padding: 0 1.5rem 2rem 1.5rem;
+}
+.dashboard-header h1 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    color: #1e293b;
+}
+.dashboard-subtitle {
+    color: #64748b;
+    font-size: 1.13rem;
+    margin-bottom: 2.2rem;
+}
+
+.stats-cards {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+.stat-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    padding: 1.5rem 2.2rem 1.5rem 1.5rem;
+    display: flex;
+    align-items: center;
+    min-width: 220px;
+    flex: 1 1 220px;
+    gap: 1.2rem;
+}
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+.stat-icon.blue { background: #e0e7ff; }
+.stat-icon.yellow { background: #fef9c3; }
+.stat-icon.green { background: #d1fae5; }
+.stat-icon.red { background: #fee2e2; }
+.stat-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.stat-label {
+    color: #64748b;
+    font-size: 1.01rem;
+    margin-bottom: 0.2rem;
+}
+.stat-value {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.requests-section {
+    margin-top: 2.5rem;
+}
+.requests-section h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: #1e293b;
+}
+.no-requests {
+    color: #64748b;
+    font-size: 1.08rem;
+    margin-top: 1.5rem;
+}
+.requests-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.request-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 2px solid #fde68a;
+    padding: 1.5rem 2rem 1.2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+.request-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+.user-badge {
+    background: #f1f5f9;
+    color: #222;
+    font-weight: 700;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+}
+.user-name {
+    font-weight: 600;
+    color: #222;
+    font-size: 1.08rem;
+}
+.status-badge {
+    background: #f3f4f6;
+    color: #64748b;
+    font-size: 0.98rem;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 0.3rem 1.1rem;
+    margin-left: auto;
+}
+.request-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.equipment-name {
+    font-size: 1.08rem;
+    color: #222;
+    font-weight: 500;
+}
+.duration-badge {
+    background: #fef9c3;
+    color: #b45309;
+    font-size: 1.01rem;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 0.4rem 1.1rem;
+}
+.objective {
+    font-size: 1.08rem;
+    color: #222;
+    font-weight: 500;
+}
+.request-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+.approve-btn, .reject-btn {
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 0.7rem 1.6rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.approve-btn {
+    background: #111827;
+    color: #fff;
+}
+.approve-btn:hover {
+    background: #2563eb;
+}
+.reject-btn {
+    background: #ef4444;
+    color: #fff;
+}
+.reject-btn:hover {
+    background: #b91c1c;
+}
+.btn-icon {
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+}
+.logout-btn {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+.logout-btn:hover {
+    background-color: #dc2626;
+}
+
+@media (max-width: 900px) {
+    .stats-cards {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    .dashboard-main {
+        padding: 0 0.5rem 2rem 0.5rem;
+    }
+}
+@media (max-width: 600px) {
+    .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.7rem;
+        padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+    }
+    .nav-menu {
+        margin-left: 0;
+        gap: 0.7rem;
+    }
+    .profile-badge {
+        margin-left: 0;
+    }
+    .dashboard-header h1 {
+        font-size: 1.3rem;
+    }
+    .stat-card {
+        padding: 1.1rem 1rem 1.1rem 1rem;
+    }
+    .request-card {
+        padding: 1rem 0.7rem 0.7rem 0.7rem;
+    }
+} 

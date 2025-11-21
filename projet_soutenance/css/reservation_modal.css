@@ -1,0 +1,96 @@
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(30, 41, 59, 0.35);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+.modal {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(30,41,59,0.18);
+  padding: 2em 2.2em 1.5em 2.2em;
+  min-width: 320px;
+  max-width: 95vw;
+  width: 370px;
+  position: relative;
+  font-family: 'Inter', Arial, sans-serif;
+  animation: modalIn 0.25s cubic-bezier(.4,2,.6,1) both;
+}
+@keyframes modalIn {
+  from { transform: translateY(40px) scale(0.95); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+.modal-close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background: none;
+  border: none;
+  font-size: 1.3em;
+  color: #1976d2;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.modal-close:hover {
+  color: #e74c3c;
+}
+.modal h2 {
+  margin-top: 0;
+  margin-bottom: 1.2em;
+  font-size: 1.15em;
+  color: #1976d2;
+  font-weight: 600;
+  text-align: center;
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.modal-form input,
+.modal-form textarea {
+  font-family: inherit;
+  font-size: 1em;
+  padding: 0.7em 1em;
+  border: 1px solid #e0e7ef;
+  border-radius: 8px;
+  background: #f8fafc;
+  outline: none;
+  transition: border 0.2s;
+}
+.modal-form input:focus,
+.modal-form textarea:focus {
+  border-color: #1976d2;
+}
+.modal-form textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+.btn-modal-envoyer {
+  background: linear-gradient(90deg, #1976d2 60%, #2196f3 100%);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 0.7em 2.2em;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(25,118,210,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+  margin-top: 0.5em;
+}
+.btn-modal-envoyer:hover {
+  background: linear-gradient(90deg, #125ea7 60%, #1976d2 100%);
+  box-shadow: 0 4px 16px rgba(25,118,210,0.13);
+}
+@media (max-width: 500px) {
+  .modal {
+    padding: 1em 0.5em 1em 0.5em;
+    min-width: 0;
+    width: 98vw;
+  }
+} 

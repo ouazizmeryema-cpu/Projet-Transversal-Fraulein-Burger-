@@ -1,0 +1,239 @@
+body {
+    background: #f8fafc;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+.role-select-container {
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 1.15rem;
+    margin-bottom: 2.5rem;
+}
+
+.roles {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.role-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    padding: 2.2rem 2rem 2rem 2rem;
+    min-width: 260px;
+    max-width: 320px;
+    flex: 1 1 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.role-card:hover {
+    box-shadow: 0 8px 32px rgba(37,99,235,0.13);
+    transform: translateY(-4px) scale(1.03);
+}
+
+.role-icon {
+    margin-bottom: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.role-icon.blue svg {
+    display: block;
+}
+
+.role-icon.green svg {
+    display: block;
+}
+
+.role-card h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+}
+
+.role-card p {
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.role-btn {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.07);
+    outline: none;
+}
+
+.role-card:last-child .role-btn {
+    background: #10b981;
+    box-shadow: 0 2px 8px rgba(16,185,129,0.07);
+}
+
+.role-btn:hover {
+    background: #1d4ed8;
+}
+
+.role-card:last-child .role-btn:hover {
+    background: #059669;
+}
+
+@media (max-width: 700px) {
+    .roles {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .role-card {
+        max-width: 100%;
+    }
+    .role-select-container {
+        padding: 1rem 0.2rem;
+    }
+}
+
+/* Login Card Styles */
+.login-card {
+    max-width: 420px;
+    margin: 4rem auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.09);
+    padding: 2.5rem 2rem 2rem 2rem;
+    text-align: center;
+}
+.lock-icon {
+    background: #f3f4f6;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.2rem auto;
+}
+.login-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: #1e293b;
+}
+.login-subtitle {
+    color: #64748b;
+    margin-bottom: 2rem;
+    font-size: 1.08rem;
+}
+form {
+    text-align: left;
+}
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #1e293b;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.input-group {
+    position: relative;
+    margin-bottom: 1.2rem;
+}
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 0.8rem 2.5rem 0.8rem 2.5rem;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f8fafc;
+    transition: border-color 0.2s;
+}
+.input-group input:focus {
+    border-color: #2563eb;
+    outline: none;
+}
+.input-icon {
+    position: absolute;
+    left: 0.9rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0aec0;
+    font-size: 1.1rem;
+    pointer-events: none;
+}
+.toggle-password {
+    position: absolute;
+    right: 0.9rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #a0aec0;
+    font-size: 1.1rem;
+    padding: 0;
+    outline: none;
+}
+.login-btn {
+    width: 100%;
+    background: #111827;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.9rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.login-btn:hover {
+    background: #1e293b;
+}
+.test-credentials {
+    background: #f1f5f9;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 2rem;
+    color: #334155;
+    font-size: 0.98rem;
+    text-align: center;
+}
+.test-credentials strong {
+    display: block;
+    margin-bottom: 0.3rem;
+}
+@media (max-width: 500px) {
+    .login-card {
+        margin: 1.5rem 0.2rem;
+        padding: 1.5rem 0.5rem 1.2rem 0.5rem;
+    }
+} 
